@@ -216,7 +216,7 @@ def delete_user():
         sleep(1)
 
         driver.find_element(By.XPATH, '//*[@class="deletePopupBtn deleteRed"]').click()
-        sleep(2)
+        sleep(3)
         print(f'Test scenario: Delete new user account Username - "{locators.new_username} -------is passed')
         sleep(2)
 
@@ -228,7 +228,7 @@ def login_with_deleted_user():
     # check that we are on the user's Main page
     if driver.current_url == locators.advantage_shopping_cart_url:
         driver.find_element(By.ID, 'menuUser').click()
-        sleep(2)
+        sleep(3)
 
         driver.find_element(By.NAME, "username").send_keys(locators.new_username)
         sleep(0.5)
@@ -243,7 +243,7 @@ def login_with_deleted_user():
         sleep(1)
 
         driver.find_element(By.XPATH, '//*[@class="closeBtn loginPopUpCloseBtn"]').click()
-        sleep(1)
+        sleep(2)
 
         print(f'Test scenario: Check login with a deleted user account \n'
               f'Username- "{locators.new_username}", password- "{locators.new_password}"\n'
